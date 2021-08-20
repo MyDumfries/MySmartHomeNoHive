@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roundedwidget"
+    android:padding="@dimen/widget_margin"
+    android:id="@+id/widget_view">
+
+    <TextView
+        android:id="@+id/temperature_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="#00FF00"
+        android:text="Temperature"
+        android:textColor="#800080"
+        android:textSize="12sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/actualtemperature_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="#00FF00"
+        android:text="Actual"
+        android:textColor="#800080"
+        android:layout_below="@id/temperature_text"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/targettemperature_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperature_text"
+        android:layout_toRightOf="@id/temperature_text"
+        android:layout_marginTop="2dp"
+        android:text="Target"
+        android:textColor="#800080"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/logcabin_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actualtemperature"
+        android:layout_marginTop="10dp"
+        android:background="#00FF00"
+        android:text="Log Cabin"
+        android:textColor="#800080"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/actualtemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actualtemperature_text"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:background="#00FF00"
+        android:text="00.00"
+        android:textColor="#800080"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/targettemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/targettemperature_text"
+        android:layout_alignTop="@+id/actualtemperature"
+        android:layout_marginLeft="2dp"
+        android:background="#00FF00"
+        android:text="00.00"
+        android:textColor="#800080"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/tempdown_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/targettemperature_text"
+        android:layout_toLeftOf="@id/targettemperature_text"
+        android:background="@drawable/roundedbutton"
+        android:text=" - "
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/tempup_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/targettemperature_text"
+        android:layout_toRightOf="@id/targettemperature_text"
+        android:background="@drawable/roundedbutton"
+        android:text="+"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/logcabin_button"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@id/logcabin_text"
+        android:layout_below="@id/tempdown_button"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Off"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/Timetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:text="TextView"
+        android:textSize="11sp"/>
+
+    <Button
+        android:id="@+id/refresh_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/actualtemperature_text"
+        android:layout_toRightOf="@id/tempup_button"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Refresh"
+        android:textSize="10sp"
+        android:textColor="#000000" />
+
+</RelativeLayout>
